@@ -105,29 +105,57 @@ nav a:hover {
 
 main {
     padding: 20px;
+    padding-top: 10px; 
     margin: 20px;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-
-table {
+.table-container {
     width: 100%;
+    overflow-x: auto;                /* enable horizontal scroll */
+    -webkit-overflow-scrolling: touch; /* smooth scroll on iOS */
+    min-width: 0;                     /* fix flex/grid overflow issues */
+    margin: 0 auto 20px;              
+}
+
+.table-container table {
     border-collapse: collapse;
-    margin-bottom: 20px;
+    width: auto;               
+    min-width: 600px;                 /* optional fallback if max-content unsupported */
+    table-layout: auto;               
 }
 
-th, td {
-    padding: 12px;
+.table-container caption {
+    caption-side: top;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.table-container th,
+.table-container td {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
     text-align: left;
-    border-bottom: 1px solid #ddd;
+    
+    /* KEY FIXES FOR MOBILE SCROLL */
+    white-space: nowrap;             /* prevent wrapping (keeps cells readable) */
+    overflow: visible;               /* allow scrolling instead of clipping */
+    text-overflow: clip;             /* remove ellipsis */
+    box-sizing: border-box;
 }
 
-th {
+.table-container th {
     background-color: #333;
     color: white;
+    position: sticky;              
+    top: 0;
+    z-index: 2;
 }
+
 img {
     max-width: 100%; 
     height: auto;     
@@ -159,6 +187,4 @@ footer a:hover {
     color: #ffdd00; 
 }
 
-main {
-    padding-top: 10px;  
-}
+
