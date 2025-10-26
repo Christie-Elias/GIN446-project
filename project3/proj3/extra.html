@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css?v=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extra topics</title>
+</head>
+<body>
+          <aside class="sidebar">
+    <div class="sidebar-header">
+        <h2 class="menu">Menu</h2>
+    </div>
+    <div class="sidebar-content">
+        <ul class="menu-list">
+            <li><a href="start.html" class="menu-link">
+                <i class="fas fa-home"></i>
+                <span class="link-text">Home</span>
+            </a></li>
+            <li><a href="cv.html" class="menu-link">
+                <i class="fas fa-file-alt"></i>
+                <span class="link-text">My CV</span>
+            </a></li>
+            <li><a href="schedule.html" class="menu-link">
+                <i class="fas fa-calendar-alt"></i>
+                <span class="link-text">My schedule</span>
+            </a></li>
+             <li><a href="events.html" class="menu-link">
+        <i class="fas fa-code"></i>
+        <span class="link-text">HTML Events</span>
+    </a></li>
+        <li><a href="extra.html" class="menu-link">
+        <i class="fas fa-plus"></i>
+        <span class="link-text">Extra topics</span>
+    </a></li>
+        </ul>
+        <div class="leave">
+            <a href="../index.html" class="menu-link">
+                <i class="fas fa-sign-out-alt"></i>
+                <span class="link-text">Leave Project</span>
+            </a>
+        </div>
+    </div>
+</aside>
+    <header class="indexheader">
+ <h1>Extra topics</h1>
+    </header>
+<main>
+        <article>
+        <section>
+            <h2>How do websites secure your passwords?</h2>
+            <p>
+When learning about encryption and strong passwords, it's also crucial to understand how passwords are stored on servers. 
+Once data is sent to a server, it's beyond your control, so servers should store minimal information and only in encrypted 
+form. SQL injections and database breaches can expose plain-text data, which is why secure servers use <strong>hashing</strong> instead of 
+storing passwords directly. Hashing converts a password into a fixed, unreadable string using algorithms like <b>SHA-256</b> or 
+<b>SHA-512</b>, often combined with <b>PBKDF2</b> for added protection against brute-force attacks. When you log in, your password is
+ hashed again and compared with the stored hash—if they match, access is granted without ever revealing your real password.<sup><a href="references.html#r16">{16}</a></sup>
+            </p>
+        </section>
+
+        <section>
+            <h2>Modifying $x in a PHP foreach loop</h2>
+<p>Let's take this loop for example:
+    <br>
+    <code>
+    $arr = [1, 2, 3, 4, 5]; <br>
+    foreach ($arr as $x) { <br>
+        $x = $x * 2; <br>
+    } <br>
+    </code>
+    After executing this code, the original array $arr remains unchanged as [1, 2, 3, 4, 5]. 
+    This is because in a foreach loop, $x is a copy of each element in the array,
+    <br>
+    <br>
+    On the other hand, if you want to modify the original array elements,
+     you can use a reference by adding an ampersand (&) before $x:
+     <br>
+     <code>
+        $arr = [1, 2, 3, 4, 5]; <br>
+        foreach ($arr as &$x) { <br>
+            $x = $x * 2; <br>
+        } <br>
+     </code>
+     Here, the output will be [2, 4, 6, 8, 10] because $x is a reference to each element in the array,
+      allowing you to modify the original array directly.
+</p>
+        </section>
+
+ </article>
+    </main>
+        <footer>
+            <hr>
+                  <p>
+    <strong><u>Disclaimer</u>:</strong>
+    This website was created solely for educational purposes as part of the web programming course
+    <strong>GIN446</strong>. 
+    </p>
+              <p>See <a href="references.html">References</a> for full citation details.</p>
+            <p><em>Last updated: October 19, 2025</em></p>
+        </footer>
+    
+</body>
+</html>

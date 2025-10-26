@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link rel="stylesheet" href="styles.css?v=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About JavaScript</title>
+</head>
+<body>
+  <header>
+   
+<nav class="article-nav">
+    <a href="start.html">Home</a> |
+    <a href="histo.html">History</a> |
+    <a href="security.html">Security</a> |
+    <a href="mobile-first.html">Mobile-First</a> |
+    <a href="stat.html">Stats</a> |
+    <a href="css.html">CSS</a>
+</nav>
+ <h1>About JavaScript</h1>
+  </header>
+
+  <main>
+    <article>
+
+      <section>
+        <h2>JavaScript, JScript, and ECMAScript</h2>
+        <p>
+          <ol>
+         <li><strong> JavaScript </strong>is a programming language that is frequently utilized in web development.
+            Its code can only be executed on a web browser.  In addition to HTML and CSS, 
+            JavaScript is a fundamental component of the World Wide Web.  Brendan Eich was 
+            the creator of JavaScript, which debuted on December 4, 1995. 
+        </li>
+         <li> Since <strong>JScript</strong> was a variation of Microsoft's JavaScript, it is identical to JavaScript. 
+            Because Oracle Corporation is the trademark of JavaScript, Microsoft intended to avoid 
+            trademark difficulties when implementing the program, which is why it was dubbed JScript.
+
+        </li>
+         <li><strong>ECMAScript</strong> is a formal standard
+           (specifically, ECMA-262) developed by Ecma International to ensure that 
+           scripting languages like JavaScript behave consistently across different 
+           platforms and browsers. 
+            The European Computer Manufacturers Association (ECMA) developed the standard, which is now maintained by 
+            Ecma International.  The first edition of ECMA-262 was adopted by the Ecma General Assembly in June 1997.
+             Several editions of the language standard have been published since then.
+         <sup><a href="references.html#r14">{14}</a></sup>
+          </li>
+         </ol>
+        </p>
+      </section>
+
+      <section>
+        <h2>Increment Operators </h2>
+        <p>
+To raise the variable's value by one, use the JavaScript increment(+ +) operator. 
+Where you place the ++ determines the value that the operand returns:
+          <ul>
+            <li><strong>prefix increment:</strong> When the ++ operator is placed before the variable, 
+                the value is increased by one and then returned.
+            </li>
+            <li><strong>postfix increment:</strong> When the ++ operator is placed after the variable, 
+             the value is returned first, and then incremented. 
+            </li>
+</ul>
+The increment operator can only be applied on variable and object properties, meaning it can only be
+ used on references. Furthermore, it is not possible to chain the increment operator.
+        </p>
+         <h3> Example: </h3>
+        <code>
+            let i = 5;<br>
+            console.log(++i); // prints 6 <br>
+            console.log(i++); // prints 6 <br>
+            console.log(i);   // prints 7 
+        </code>
+    </p>
+   
+</section>
+
+<section>
+        <h2>Function Rest Parameters</h2>
+        <p>
+       Rest parameters enables a function to take a variable amount 
+       of arguments. They are indicated by three dots (...) followed by the name of the parameter. 
+       All of the arguments supplied to the function can then be accessed using this parameter name.
+       <br> When working with functions that accept an unknown amount of arguments, rest parameters 
+       are quite helpful. Instead of having to iterate through all of the arguments and store them in
+        an array, rest parameters allow you to easily access all of the arguments.
+         </p>
+       <h3> Example: </h3>
+        <code>
+          function sum(...numbers) {<br>
+            &nbsp;&nbsp;let total = 0;<br>
+            &nbsp;&nbsp;for (let n of numbers) total += n;<br>
+            &nbsp;&nbsp;return total;<br>
+            }<br>
+            console.log(sum(2, 4, 6, 8)); // prints 20
+        </code>
+        <br>
+        </sectionp>
+        <p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">More examples on MDN Web Docs.</a>
+    </p>
+</section>
+<section>
+        <h2>Swap Function</h2>
+        <p>
+       In <b>JavaScript</b>, when you pass primitive types such as numbers, strings, or booleans to
+        a function, they are passed by value. This means the function receives a separate
+         copy of the variable’s value, not the original one. As a result, any modifications
+          made inside the function do not change the original variable outside of it.<br>
+       This makes it impossible to create a swap function that exchanges the values of two primitive variables
+        directly. However, you can achieve a similar effect by using other ways such as:
+          <ul>
+            <li>Returning Swapped Values: 
+                  To make the swap effective, you can return the new values and assign them back to the original variables.
+                     <p>
+                     </li>  <h3> Example: </h3>
+                        <code>
+                          function swap(a, b) {<br>
+                           &nbsp;&nbsp;return [b, a];<br>
+                            }<br>
+                            let [x, y] = swap(10, 20);<br>
+                           console.log(x, y);
+                        </code>
+                      </p>
+                    </li>
+            <li>Swapping by Reference (Objects or Arrays):
+JavaScript provides a **reference to the object's memory address** when you supply an object or array.
+        This implies that its contents can be changed within the function.  
+        The original reference won't be impacted even if the parameter is reassigned.
+    <p>
+      <h3>Example:</h3>
+        <code>
+            function swapProps(obj) {<br>
+            &nbsp;&nbsp;let temp = obj.a;<br>
+            &nbsp;&nbsp;obj.a = obj.b;<br>
+            &nbsp;&nbsp;obj.b = temp;<br>
+            }<br>
+            let pair = { a: 5, b: 9 };<br>
+            swapProps(pair);<br>
+            console.log(pair.a, pair.b); // prints 9 5
+        </code>
+    </p>
+            </li>
+          </ul>
+          <a href="https://www.geeksforgeeks.org/javascript/how-to-swap-two-variables-in-javascript/">More approaches to swap variables.</a>
+        </p>
+</section>
+<section>
+    <h2>The Document Object Model (DOM)</h2>
+    <p>
+        A programming interface for HTML and XML documents is called the <strong>DOM</strong>.
+         It serves as a representation of the page, allowing applications to 
+         dynamically alter the document's content, appearance, and structure. 
+         Real-time webpage manipulation, event handling, and element updates
+          are all possible with JavaScript's interaction with the DOM.
+    </p>
+    <h3>Video Example:</h3>
+    <p>Watch this video to learn more about the DOM:</p>
+ <div class="video-container">
+    <video class="responsive-video" controls>
+    <source src="JavaScriptDOM.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+ <div class="video-source">
+      Source: <a href="https://youtu.be/NO5kUNxGIu0?si=aP69jQvpBqIC1L12">Youtube video link</a>
+    </div>
+  </div>
+</div>
+    <p>
+        You can use JavaScript methods like <code>getElementById</code>, 
+        <code>querySelector</code>, and <code>addEventListener</code> to interact with the DOM.
+    </p>
+</section>
+<section>
+<h2>Regular Expressions</h2>
+<p>A <strong>Regular Expression</strong> is a sequence of characters that forms a search pattern.
+Regex is a common shorthand for a regular expression. <br>
+JavaScript RexExp is an Object for handling Regular Expressions.
+RegExp are be used for:
+<ul>
+<li>Text searching</li>
+<li>Text replacing</li>
+<li>Text validation</li>
+</ul>
+Regular Expression Syntax : <code>/pattern/modifier flags;</code>
+<br> <br>
+
+Regular expression flags are parameters that can modify how a pattern is used, such as
+ making it case-insensitive or global.<br>
+These are the most common:
+<ul>
+  <li><strong>g</strong> - Global search (find all)</li>
+  <li><strong>i</strong> - Case-insensitive search</li>
+  <li><strong>m</strong> - Multi-line search</li>
+  <li><strong>u</strong> - 	Enables Unicode support (new 2015)</li>
+</ul>
+<h3> Example: </h3>
+ Do a case-insensitive search for "ABC" in a string: <br>
+<code>
+let text = "abc defg aBc";<br>
+let n = text.search(/ABC/i);
+</code> <br> <br>
+  Regular expressions are often used with the string methods:
+<ul>
+  <li><strong>match(regex)</strong>: returns an Array of results</li>
+  <li><strong>replace(regex)</strong>: returns a new string</li>
+  <li><strong>search(regex)</strong>: returns the index of the first match</li>
+</ul>
+
+<h3> Example: </h3>
+Replace "Hello" with "Hi" in a string:<br>
+<code>
+let text = "Hello World";<br>
+let result = text.replace(/Hello/i, "Hi");;
+</code> <br> <br>
+ <a href="https://www.w3schools.com/js/js_regexp.asp">Learn more on W3Schools.</a>
+</p>
+
+<h3><u>Regex in python </u></h3>
+<p>
+  Python has a built-in package called re, which can be used to work with Regular Expressions.
+<br>
+Import the re module: 
+<code>import re</code> <br>
+When you have imported the re module, you can start using regular expressions:
+
+<h3> Example: </h3>
+Search the string to see if it starts with "The" and ends with "Spain":<br>
+
+<code>
+import re <br>
+txt = "The rain in Spain" <br>
+x = re.search("^The.*Spain$", txt)
+</code> <br> <br>
+The re module offers a set of functions that allows us to search a string for a match:
+<ul>
+  <li><strong>findall()</strong>: Returns a list containing all matches</li>
+  <li><strong>search()</strong>: Returns a Match object if there is a match anywhere in the string</li>
+  <li><strong>split()</strong>: Returns a list where the string has been split at each match</li>
+  <li><strong>sub()</strong>: Replaces one or many matches with a string</li>
+  </ul>
+</p>
+<a href="https://www.w3schools.com/python/python_regex.asp">Learn more on W3Schools.</a>
+</section>
+ </article>
+</main>
+               <footer>
+            <hr>
+              <p>See <a href="references.html">References</a> for full citation details.</p>
+            <p><em>Last updated: October 16, 2025</em></p>
+             <div class="back-button">
+    <a href="../index.html">&#x27F5; Back</a>
+          </div>
+        </footer>
+       
+</body>
+</html>
