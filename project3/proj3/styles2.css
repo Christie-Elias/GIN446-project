@@ -1,7 +1,6 @@
  
-/* scheduke page */
+/* schedule page */
 * {
-
             padding: 0;
             box-sizing: border-box;
         }
@@ -17,6 +16,7 @@
     min-height: 100vh;
     padding: 40px 0;
     margin-left: 95px;
+
 }
 .container {
     width: 90%;
@@ -47,7 +47,8 @@
         .schedule-table {
             width: 100%;
             -webkit-overflow-scrolling: touch;   
-            min-width: 800px;        
+            min-width:0;
+            table-layout: auto;    
      
 }
         
