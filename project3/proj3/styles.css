@@ -939,7 +939,8 @@ body.cv-entry {
 }
 
 .cv-entry input,
-.cv-entry textarea {
+.cv-entry textarea,
+.cv-entry select {
   width: 100%;
   padding: 8px;
   margin-top: 5px;
@@ -949,6 +950,12 @@ body.cv-entry {
   color: var(--text-color);
   box-sizing: border-box;
 }
+
+.cv-entry select option {
+  background-color: var(--table-row-even-bg);
+  color: var(--text-color);
+}
+
 
 .cv-entry input:focus,
 .cv-entry textarea:focus {

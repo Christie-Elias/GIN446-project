@@ -34,7 +34,16 @@ document.addEventListener("DOMContentLoaded", () => {
     div.className = "language-item";
     div.innerHTML = `
       <input type="text" placeholder="Language" class="language" required>
-      <input type="text" placeholder="Proficiency (e.g. Fluent)" class="proficiency" required>
+      <select class="proficiency" required>
+        <option value="">Select Proficiency</option>
+        <option value="Beginner">Beginner</option>
+        <option value="Elementary">Elementary</option>
+        <option value="Intermediate">Intermediate</option>
+        <option value="Upper-Intermediate">Upper-Intermediate</option>
+        <option value="Advanced">Advanced</option>
+        <option value="Fluent">Fluent</option>
+        <option value="Native">Native</option>
+      </select>
       <button type="button" class="remove-btn"><i class="fas fa-trash"></i> Remove</button>
     `;
     div.querySelector(".remove-btn").addEventListener("click", () => div.remove());
