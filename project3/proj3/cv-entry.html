@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV Data Entry</title>
+ 
+  <link rel="stylesheet" href="styles.css?v=2.0">
+ <link rel="stylesheet" href="styles2.css?v=2.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="cv-entry">
+
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <h2 class="menu">Menu</h2>
+    </div>
+    <div class="sidebar-content">
+      <ul class="menu-list">
+        <li><a href="start.html" class="menu-link"><i class="fas fa-home"></i> <span class="link-text">Home</span></a></li>
+        <li><a href="cv.html" class="menu-link"><i class="fas fa-file-alt"></i> <span class="link-text">My CV</span></a></li>
+         <li><a href="cv-entry.html" class="menu-link"><i class="fas fa-edit"></i> <span class="link-text">Make a CV</span></a></li>
+        <li><a href="schedule.html" class="menu-link"><i class="fas fa-calendar-alt"></i> <span class="link-text">Schedule</span></a></li>
+        <li><a href="events.html" class="menu-link"><i class="fas fa-code"></i> <span class="link-text">Events Catalog</span></a></li>
+        <li><a href="extra.html" class="menu-link"><i class="fas fa-plus"></i><span class="link-text">Extra topics</span></a></li>
+      </ul>
+      <div class="leave">
+        <a href="../index.html" class="menu-link"><i class="fas fa-sign-out-alt"></i> <span class="link-text">Leave Project</span></a>
+      </div>
+    </div>
+  </aside>
+
+  <header>
+    <h1>CV Data Entry</h1>
+    <p>Fill out the form to generate and preview your CV instantly.</p>
+  </header>
+
+  <main class="cv-entry-container">
+
+
+    <section class="cv-form-section">
+      <form id="cvForm" class="form-content" novalidate>
+
+        <!-- Personal Information -->
+        <section class="form-section">
+          <h2>Personal Information</h2>
+          
+<label>Upload Profile Picture:</label>
+<input type="file" id="profilePicInput" accept="image/*">
+        
+          <div class="form-group">
+            <input type="text" id="fullName" placeholder="Full Name" required>
+          </div>
+          <div class="form-group">
+            <input type="text" id="tagline" placeholder="Professional Title / Tagline" required>
+          </div>
+          <div class="form-group">
+            <textarea id="aboutMe" placeholder="About Me" required></textarea>
+          </div>
+        </section>
+
+        <!-- Contact Information -->
+        <section class="form-section">
+          <h2>Contact Information</h2>
+          <div class="form-group">
+            <input type="email" id="email" placeholder="Email" required>
+          </div>
+          <div class="form-group">
+            <input type="tel" id="phone" placeholder="Phone Number" required>
+          </div>
+          <div class="form-group">
+            <input type="text" id="location" placeholder="Location" required>
+          </div>
+          <div class="form-group">
+            <input type="text" id="linkedin" placeholder="LinkedIn URL (optional)">
+          </div>
+          <div class="form-group">
+            <input type="text" id="github" placeholder="GitHub URL (optional)">
+          </div>
+        </section>
+
+        <!-- Education -->
+        <section class="form-section">
+          <h2>Education</h2>
+          <div id="educationList"></div>
+          <button type="button" class="add-btn" onclick="addEducation()">
+            <i class="fas fa-plus"></i> Add Education
+          </button>
+        </section>
+
+        <!-- Technical Skills -->
+        <section class="form-section">
+          <h2>Technical Skills</h2>
+          <div id="skillsList"></div>
+          <button type="button" class="add-btn" onclick="addSkill()">
+            <i class="fas fa-plus"></i> Add Skill
+          </button>
+        </section>
+
+        <!-- Languages -->
+        <section class="form-section">
+          <h2>Languages</h2>
+          <div id="languagesList"></div>
+          <button type="button" class="add-btn" onclick="addLanguage()">
+            <i class="fas fa-plus"></i> Add Language
+          </button>
+        </section>
+
+        <!-- Work Experience -->
+        <section class="form-section">
+          <h2>Work Experience</h2>
+          <div class="checkbox-group">
+            <input type="checkbox" id="includeJobs" onchange="toggleJobs()">
+            <label for="includeJobs">Include work experience</label>
+          </div>
+          <div id="jobsSection" style="display: none;">
+            <div id="jobsList"></div>
+            <button type="button" class="add-btn" onclick="addJob()">
+              <i class="fas fa-plus"></i> Add Job
+            </button>
+          </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="form-section">
+          <h2>Projects</h2>
+          <div class="checkbox-group">
+            <input type="checkbox" id="includeProjects" onchange="toggleProjects()">
+            <label for="includeProjects">Include projects</label>
+          </div>
+          <div id="projectsSection" style="display: none;">
+            <div id="projectsList"></div>
+            <button type="button" class="add-btn" onclick="addProject()">
+              <i class="fas fa-plus"></i> Add Project
+            </button>
+          </div>
+        </section>
+
+        <!-- Soft Skills -->
+        <section class="form-section">
+          <h2>Soft Skills</h2>
+          <div class="form-group">
+            <input type="text" id="softSkillInput" placeholder="Type a soft skill and press Enter">
+          </div>
+          <div id="softSkillsTags" class="tags-container"></div>
+        </section>
+
+        <!-- Interests -->
+        <section class="form-section">
+          <h2>Interests & Hobbies</h2>
+          <div class="form-group">
+            <input type="text" id="interestInput" placeholder="Type an interest and press Enter">
+          </div>
+          <div id="interestsTags" class="tags-container"></div>
+        </section>
+
+        <button type="submit" class="btn-submit">Generate CV</button>
+        <p id="formMessage" class="error-message"></p>
+      </form>
+    </section>
+
+    <!-- CV PREVIEW  -->
+    <section  id="cvPreview">
+      <h2>Your CV preview will appear here...</h2>
+    </section>
+
+  </main>
+
+  <footer >
+    <hr>
+    <p><strong><u>Disclaimer</u>:</strong> This website was created solely for educational purposes as part of the web programming course <strong>GIN446</strong>.</p>
+    <p>See <a href="references.html">References</a> for full citation details.</p>
+    <p><em>Last updated: November 10, 2025</em></p>
+  </footer>
+
+  <script src="js/cv.js"></script>
+</html>

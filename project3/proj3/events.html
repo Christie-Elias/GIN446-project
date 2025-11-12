@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="styles.css?v=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML events</title>
+<meta charset="utf-8" />
+  <link rel="stylesheet" href="styles.css?v=2.0">
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<title>Browser Events Catalog</title>
 </head>
 <body>
     <aside class="sidebar">
@@ -22,13 +22,15 @@
                 <i class="fas fa-file-alt"></i>
                 <span class="link-text">My CV</span>
             </a></li>
+             <li><a href="cv-entry.html" class="menu-link"><i class="fas fa-edit"></i> <span class="link-text">Make a CV</span></a></li>
             <li><a href="schedule.html" class="menu-link">
                 <i class="fas fa-calendar-alt"></i>
                 <span class="link-text">My schedule</span>
             </a></li>
+            
              <li><a href="events.html" class="menu-link">
         <i class="fas fa-code"></i>
-        <span class="link-text">HTML Events</span>
+        <span class="link-text">Events Catalog</span>
     </a></li>
         <li><a href="extra.html" class="menu-link">
         <i class="fas fa-plus"></i>
@@ -43,32 +45,37 @@
         </div>
     </div>
 </aside>
-    <header class="indexheader">
- <h1>List of all HTML events</h1>
-    </header>
-<main>
-        <article>
-        <section>
-            <h2>Introduction</h2>
+ <header>
+    <h1>Browser Events Catalog</h1>
+  </header>
 
+  <main>
+<div class="filter-bar">
+  <input type="text" id="search" placeholder="Search events...">
+  <select id="category">
+    <option value="">All Categories</option>
+  </select>
+</div>
 
-        </section>
+<div id="rowCount" class="row-count">Showing 0 events</div>
 
-        <section>
-            <h2>List of events</h2>
+    <section class="table-container table-events" >
+      <table id="eventsTable">
+        <thead>
+          <tr>
+            <th>Event Name</th>
+            <th>Category</th>
+            <th>Description</th>
+            <th>Supported HTML Tags</th>
+            <th>Link</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
 
-
-
-        </section>
-
-
-
-
-
-
-
- </article>
-    </main>
+  <script src="js/events.js"></script>
         <footer>
             <hr>
                   <p>
@@ -78,7 +85,6 @@
     </p>
               <p>See <a href="references.html">References</a> for full citation details.</p>
             <p><em>Last updated: October 26, 2025</em></p>
-             <div class="back-button">
     <a href="start.html">Home</a>
 </div>
         </footer>

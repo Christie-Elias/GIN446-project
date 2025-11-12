@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>البرمجة بالعربية | Coding in Arabic</title>
-    <link rel="stylesheet" href="styles.css?v=1.0">
+    <link rel="stylesheet" href="styles.css?v=2.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -17,8 +17,9 @@
             <ul class="menu-list">
                 <li><a href="start.html" class="menu-link"><i class="fas fa-home"></i> <span class="link-text">Home</span></a></li>
                 <li><a href="cv.html" class="menu-link"><i class="fas fa-file-alt"></i> <span class="link-text">My CV</span></a></li>
+                 <li><a href="cv-entry.html" class="menu-link"><i class="fas fa-edit"></i> <span class="link-text">Make a CV</span></a></li>
                 <li><a href="schedule.html" class="menu-link"><i class="fas fa-calendar-alt"></i> <span class="link-text">Schedule</span></a></li>
-                <li><a href="events.html" class="menu-link"><i class="fas fa-code"></i> <span class="link-text">HTML Events</span></a></li>
+                <li><a href="events.html" class="menu-link"><i class="fas fa-code"></i> <span class="link-text">Events Catalog</span></a></li>
                 <li><a href="extra.html" class="menu-link"><i class="fas fa-plus"></i><span class="link-text">Extra topics</span>
     </a></li>
             </ul>
@@ -60,17 +61,39 @@
 
   <p>مثلًا، بدلًا من كتابة الكود التقليدي بهذه الطريقة:</p>
 
-  <code >
-:if age > 18 <br>
-    print("Welcome")
+<div class="arabic-example">
+  <figure>
+    <img src="assets/arabcode.png" alt="Coding keywords in arabic" style="height: 400px; width: 400px;"/>
+    <figcaption>LLMs as a compiler for an Arabic coding language</figcaption>
+  </figure>
+
+  <div class="text-side">
+    <code>
+      :if age > 18 <br>
+      print("Welcome")
+    </code>
+
+    <p>يمكننا كتابته بالعربية هكذا:</p>
+
+    <code>
+      إذا العمر > 18: <br>
+      اطبع("مرحبًا")
+    </code>
+    <br><br>
+<code>
+    :for i in range(5): <br>
+    &nbsp;&nbsp;print(i)
   </code>
 
-  <p>يمكننا كتابته بالعربية هكذا:</p>
+  <p>وبالعربية يمكننا كتابته:</p>
 
   <code>
-إذا العمر > 18: <br>
-    اطبع("مرحبًا")
+    لكل i من 0 إلى 4: <br>
+    &nbsp;&nbsp;اطبع(i)
   </code>
+</div>
+</div>
+
 
   <p>
     وهذا ممكن بنسبة 100٪ لأن <b>المترجم <bdi>(compiler / interpreter)</bdi></b> هو الذي يحدد الكلمات المفتاحية المقبولة في اللغة.
@@ -97,8 +120,20 @@
 <ul>
       <li><bdi>لغة جمل (Jamal)</bdi> : لغة برمجة عربية مستوحاة من <bdi>Python</bdi>، تستخدم كلمات عربية مثل <code>اطبع</code> و<code>إذا</code>.</li>
    <br>
-      <li><bdi>لغة قلب</bdi> : تمّ تنفيذها على شكل مفسّر (Interpreter) يعتمد أسلوب المسح الشجري (Tree-Walking) ومكتوبة بلغة JavaScript. تُكتب الأكواد فيها باللغة العربية بالكامل. <sup><a href="references.html#r15">{15}</a></sup></li>
-     <br>
+      <li><bdi>لغة قلب </bdi> : تمّ تنفيذها على شكل مفسّر (Interpreter) يعتمد أسلوب المسح الشجري (Tree-Walking) ومكتوبة بلغة JavaScript. تُكتب الأكواد فيها باللغة العربية بالكامل. <sup><a href="references.html#r15">{15}</a></sup></li>
+
+<section class="video-section">
+    <h3>فيديو توضيحي</h3>
+    <iframe 
+        src="https://www.youtube.com/embed/77KAHPZUR8g" 
+        title="البرمجة باللغة العربية | Programming in Arabic"
+        allowfullscreen
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+    </iframe>
+</section>
+
+
+      <br>
     <li><bdi>لغة أدرين</bdi> : لغة برمجة عربية تهدف إلى تعليم المفاهيم الأساسية في البرمجة بطريقة بسيطة وواضحة.</li>
      <br>
     <li><bdi>لغة ألف</bdi> : مشروع عربي مفتوح المصدر يهدف إلى تمكين المستخدم من كتابة الأكواد بالعربية وبأسلوب منطقي مفهوم.</li>
@@ -129,7 +164,7 @@
     </p>
         <p>See <a href="references.html">References</a> for full citation details.</p>
 
-        <p><em>Last updated: October 22, 2025</em></p>
+        <p><em>Last updated: November 4, 2025</em></p>
     </footer>
 </body>
 </html>

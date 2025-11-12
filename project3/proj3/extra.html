@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="styles.css?v=1.0">
+    <link rel="stylesheet" href="styles.css?v=2.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,13 +22,14 @@
                 <i class="fas fa-file-alt"></i>
                 <span class="link-text">My CV</span>
             </a></li>
+             <li><a href="cv-entry.html" class="menu-link"><i class="fas fa-edit"></i> <span class="link-text">Make a CV</span></a></li>
             <li><a href="schedule.html" class="menu-link">
                 <i class="fas fa-calendar-alt"></i>
                 <span class="link-text">My schedule</span>
             </a></li>
              <li><a href="events.html" class="menu-link">
         <i class="fas fa-code"></i>
-        <span class="link-text">HTML Events</span>
+        <span class="link-text">Events Catalog</span>
     </a></li>
         <li><a href="extra.html" class="menu-link">
         <i class="fas fa-plus"></i>
@@ -61,7 +62,7 @@ storing passwords directly. Hashing converts a password into a fixed, unreadable
         </section>
 
         <section>
-            <h2>Modifying $x in a PHP foreach loop</h2>
+            <h2>Modifying the variable in a PHP foreach loop</h2>
 <p>Let's take this loop for example:
     <br>
     <code>
@@ -70,7 +71,7 @@ storing passwords directly. Hashing converts a password into a fixed, unreadable
         $x = $x * 2; <br>
     } <br>
     </code>
-    After executing this code, the original array $arr remains unchanged as [1, 2, 3, 4, 5]. 
+    After executing this code, the original array $arr remains unchanged as [1, 2, 3, 4, 5]. <br>
     This is because in a foreach loop, $x is a copy of each element in the array,
     <br>
     <br>
@@ -87,7 +88,22 @@ storing passwords directly. Hashing converts a password into a fixed, unreadable
       allowing you to modify the original array directly.
 </p>
         </section>
+ <section>
+            <h2>What is localStorage?</h2>
+            
+<p><code>localStorage</code> in JavaScript is a browser feature that lets websites save key-value data 
+    with no expiration date, meaning the data remains even after the browser is closed or the computer 
+    restarts.<br><br> It is accessed via the <code>Window.localStorage</code> property, part of the 
+    <code>Window</code> interface, and is only accessible to the origin that created it.  <br><br>
+    Developers use <code>localStorage</code> to store user preferences, form inputs, or 
+    session data that should persist across visits. <br> <br>
+    Unlike <code>sessionStorage</code>, which clears when the browser is closed,
+     <code>localStorage</code> persists indefinitely. It offers about 5-10 MB of storage,
+      supports offline access, and is more efficient than cookies, though it should not store sensitive
+       data since it is accessible to anyone using the device.<sup><a href="references.html#r16">{16}</a></sup>
+            </p>098
 
+</section>
  </article>
     </main>
         <footer>

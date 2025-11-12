@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My CV</title>
-    <link rel="stylesheet" href="styles.css?v=1.0">
-    <link rel="stylesheet" href="styles2.css?v=1.0">
+    <link rel="stylesheet" href="styles.css?v=2.1">
+    <link rel="stylesheet" href="styles2.css?v=2.1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
    
 </head>
-<body >
 <aside class="sidebar">
         <div class="sidebar-header">
             <h2 class="menu">Menu</h2>
@@ -18,28 +17,32 @@
             <ul class="menu-list">
                 <li><a href="start.html" class="menu-link"><i class="fas fa-home"></i> <span class="link-text">Home</span></a></li>
                 <li><a href="cv.html" class="menu-link"><i class="fas fa-file-alt"></i> <span class="link-text">My CV</span></a></li>
+                <li><a href="cv-entry.html" class="menu-link"><i class="fas fa-edit"></i> <span class="link-text">Make a CV</span></a></li>
                 <li><a href="schedule.html" class="menu-link"><i class="fas fa-calendar-alt"></i> <span class="link-text">Schedule</span></a></li>
-                <li><a href="events.html" class="menu-link"><i class="fas fa-code"></i> <span class="link-text">HTML Events</span></a></li>
+                <li><a href="events.html" class="menu-link"><i class="fas fa-code"></i> <span class="link-text">Events Catalog</span></a></li>
                 <li><a href="extra.html" class="menu-link"><i class="fas fa-plus"></i><span class="link-text">Extra topics</span></a></li>
-            </ul>
+              </ul>
             <div class="leave">
                 <a href="../index.html" class="menu-link"><i class="fas fa-sign-out-alt"></i> <span class="link-text">Leave Project</span></a>
             </div>
         </div>
     </aside>
+<body >
+
 
     <div class="cv-main">
         <div class="cv-wrapper">
             <div class="cv-header">
                 <h1>Christie Elias</h1>
                 <p class="tagline">Computer Engineering Student</p>
+             <a href="assets/MyCV.pdf" download class="cv-link">Download CV</a> 
             </div>
 
             <div class="cv-grid">
                 <!-- LEFT SIDE -->
                 <div class="cv-left">
                     <div class="cv-section profile-section">
-                        <img src="profile.png" alt="my picture" class="profile-image">
+                        <img src="assets/profile.png" alt="my picture" class="profile-image">
                         <h2 class="profile-name">Christie Elias</h2>
                     </div>
 
@@ -62,16 +65,32 @@
                         </ul>
                     </div>
 
-                    <div class="cv-section">
-                        <h2><i class="fas fa-code"></i> Technical Skills</h2>
-                        <div class="skill-item"><div class="skill-name"><span>HTML/CSS</span><span>85%</span></div><div class="skill-level"><div class="skill-progress" style="width:85%"></div></div></div>
-                        <div class="skill-item"><div class="skill-name"><span>C++</span><span>80%</span></div><div class="skill-level"><div class="skill-progress" style="width:80%"></div></div></div>
-                        <div class="skill-item"><div class="skill-name"><span>Java</span><span>75%</span></div><div class="skill-level"><div class="skill-progress" style="width:75%"></div></div></div>
-                                                <div class="skill-item"><div class="skill-name"><span>SQL</span><span>75%</span></div><div class="skill-level"><div class="skill-progress" style="width:75%"></div></div></div>
-                               <div class="skill-item"><div class="skill-name"><span>Basic Electronics</span><span>70%</span></div><div class="skill-level"><div class="skill-progress" style="width:70%"></div></div></div>                  
-                        <div class="skill-item"><div class="skill-name"><span>JavaScript</span><span>60%</span></div><div class="skill-level"><div class="skill-progress" style="width:60%"></div></div></div>
-                        <div class="skill-item"><div class="skill-name"><span>MATLAB</span><span>60%</span></div><div class="skill-level"><div class="skill-progress" style="width:60%"></div></div></div>
-                    </div>
+<div class="cv-section">
+  <h2><i class="fas fa-code"></i> Technical Skills</h2>
+  <div class="skills-categories">
+    <div class="skill-category">
+      <h3><i class="fas fa-terminal"></i> Programming Languages</h3>
+      <p>C++, Java, JavaScript</p>
+    </div>
+
+    <div class="skill-category">
+      <h3><i class="fas fa-globe"></i> Web Development</h3>
+      <p>HTML, CSS, SQL</p>
+    </div>
+
+    <div class="skill-category">
+      <h3><i class="fas fa-laptop-code"></i> Software & Tools</h3>
+      <p>MATLAB, Proteus, VS Code, GitHub</p>
+    </div>
+
+    <div class="skill-category">
+      <h3><i class="fas fa-microchip"></i> Hardware Knowledge</h3>
+      <p>Electronics, Microprocessors, Circuit Analysis</p>
+    </div>
+  </div>
+</div>
+
+
 
               
             <div class="cv-section">
@@ -170,7 +189,12 @@
             </div>
         </div>
     </div>
-
+  <footer >
+    <hr>
+    <p><strong><u>Disclaimer</u>:</strong> This website was created solely for educational purposes as part of the web programming course <strong>GIN446</strong>.</p>
+    <p>See <a href="references.html">References</a> for full citation details.</p>
+    <p><em>Last updated: November 10, 2025</em></p>
+  </footer>
    
 </body>
 </html>

@@ -489,6 +489,7 @@
             color: #e3efe7;
             padding: 8px 16px;
             border-radius: 20px;
+            list-style: none;
             font-size: 0.95em;
             transition: all 0.3s ease;
         }
@@ -499,11 +500,7 @@
             transform: scale(1.05);
         }
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            color: #122F0B;
-        }
+   
         
         .language-item {
             display: flex;
@@ -533,3 +530,51 @@
         @media (max-width: 768px) {
             .cv-header h1 { font-size: 2em; }
         }
+
+        .cv-link{
+            margin-left :0 ;
+    background-color: #275F3E;
+    color: #e3efe7;
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+        }
+
+.cv-link:hover {
+    background-color: #4FE1B3;
+    color: #122F0B;
+}
+.skills-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.skill-category h3 {
+  font-size: 1.05em;
+  color: #a0b4d9;
+  margin-bottom: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.skill-category p {
+  margin: 0;
+  color: #444;
+  font-size: 0.95em;
+  line-height: 1.4;
+  background: #f8f9fb;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.skill-category i {
+  color: #5e58d1;
+  font-size: 1em;
+}
+
+        
