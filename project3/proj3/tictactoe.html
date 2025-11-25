@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Client-side Tic Tac Toe — accessible, responsive, no backend." />
+  <title>Tic Tac Toe</title>
+
+  <link rel="stylesheet" href="styles2.cssv=?v=1.1">
+</head>
+<body>
+
+  <main class="page-content" id="main" role="main">
+    <h1>Tic Tac Toe</h1>
+    <p class="lead">A small, client-side Tic Tac Toe game. X goes first.</p>
+
+    <section class="game-wrapper" aria-labelledby="gameTitle">
+      <h2 id="gameTitle" class="visually-hidden">Tic Tac Toe game</h2>
+
+  
+      <div id="board" class="board" role="grid" aria-labelledby="gameStatus"></div>
+
+  
+      <div class="controls">
+        <div id="gameStatus" class="status" aria-live="polite">Player X's turn</div>
+        <div class="buttons">
+          <button id="undoBtn" class="btn secondary" title="Undo last move">Undo</button>
+          <button id="resetBtn" class="btn" title="Start a new game">New Game</button>
+        </div>
+        <div class="scoreboard">
+  <p>X Wins: <span id="scoreX">0</span></p>
+  <p>O Wins: <span id="scoreO">0</span></p>
+  <p>Draws: <span id="scoreDraw">0</span></p>
+</div>
+
+      </div>
+
+  
+      <div class="help">
+        <p><strong>Keyboard:</strong> Tab to a cell and press Enter or Space to mark.<br> Use Undo to revert last move.</p>
+      </div>
+
+    </section>
+
+   
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+   
+    <p class="disclaimer"><strong>Disclaimer:</strong> Educational project. The Tic Tac Toe game runs entirely in your browser; no data is collected.</p>
+   <p class="last-updated"><i>Last updated: November 25, 2025</i></p>
+  </footer>
+
+ 
+  <script src="js/tictactoe.js" defer></script>
+</body>
+ <div class="back-button">
+    <a href="../index.html">Back</a>
+          </div>
+</html>

@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     div.innerHTML = `
       <input type="text" placeholder="Language" class="language" required>
       <select class="proficiency" required>
-        <option value="">Select Proficiency</option>
+        <option value="">Proficiency</option>
         <option value="Beginner">Beginner</option>
         <option value="Elementary">Elementary</option>
         <option value="Intermediate">Intermediate</option>

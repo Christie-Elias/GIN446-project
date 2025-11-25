@@ -47,7 +47,7 @@ header {
     text-align: center;
 
 }
-header::after {  /* decorative underline */
+header::after { 
     content: "";
     display: block;
     height: 4px;

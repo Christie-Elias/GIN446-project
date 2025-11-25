@@ -29,7 +29,25 @@
 </div>
 
 <div class="worldle-button">
-    <a href="worldle/wordle.html" class="btn">Play Wordle Clone</a>
+    <button class="btn" id="playGameBtn">Play a game</button>
+</div>
+
+
+<div id="gameModal" class="modal" style="display: none;">
+    <div class="modal-content game-modal">
+        <span class="close-modal" id="closeGameModal">&times;</span>
+        <h2>Choose a Game</h2>
+        <div class="game-options">
+            <a href="worldle/wordle.html" class="game-option">
+                <h3>Worldle</h3>
+                <p>Guess a hidden five-letter word</p>
+            </a>
+            <a href="proj3/tictactoe.html" class="game-option">
+                <h3>Tic Tac Toe</h3>
+                <p>Classic game of X's and O's</p>
+            </a>
+        </div>
+    </div>
 </div>
 
     </main>
@@ -37,10 +55,28 @@
     <hr>
           <p>
     <strong><u>Disclaimer</u>:</strong>
-    This website was created solely for educational purposes as part of the web programming course
+    This website was created for educational purposes as part of the web programming course
     <strong>GIN446</strong>. 
     </p>
-    <p><em>Last updated: October 29, 2025</em></p>
+    <p><em>Last updated: November 13, 2025</em></p>
 </footer>
 </body>
+
+<script>  
+    const playGameBtn = document.getElementById('playGameBtn');
+    const gameModal = document.getElementById('gameModal');
+    const closeGameModal = document.getElementById('closeGameModal');
+
+    playGameBtn.addEventListener('click', () => {
+        gameModal.style.display = 'flex';
+        document.body.classList.add('modal-open');
+    });
+
+    closeGameModal.addEventListener('click', () => {
+        gameModal.style.display = 'none';
+        document.body.classList.remove('modal-open');
+    });
+
+</script>
+<p> <a href="proj3/LostFound/add_item.php">Lost and Found App</a> </p>
 </html>
