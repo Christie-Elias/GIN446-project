@@ -50,8 +50,7 @@ login.php → PHP Sessions
 
 ## 🗂 File Structure (Simple)
 
-
-
+```
 lostfound/
 ├── home.html
 ├── login.php
@@ -67,7 +66,9 @@ lostfound/
 └── uploads
     └── item images
 
+```
 
+    
 ---
 
 ## 🗄 Database
