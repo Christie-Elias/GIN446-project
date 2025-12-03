@@ -53,6 +53,7 @@ login.php → PHP Sessions
 
 
 lostfound/
+│
 ├── home.html
 ├── login.php
 ├── signup.php
@@ -61,10 +62,14 @@ lostfound/
 ├── get_items.php
 ├── db.php
 │
-└── assets/
-├── style.css
-└── script.js
-└── profile.js
+├── assets/
+│   ├── style.css
+│   ├── script.js
+│   ├── profile.js
+│
+└── uploads/
+    └── (item images stored here)
+
 `
 
 ---
