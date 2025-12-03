@@ -62,15 +62,15 @@ lostfound/
 ├── get_items.php
 ├── db.php
 │
-├── assets/
-│   ├── style.css
-│   ├── script.js
-│   ├── profile.js
+└── assets/
+    ├── style.css
+    ├── script.js
+    └── profile.js
 │
 └── uploads/
     └── (item images stored here)
 
-`
+
 
 ---
 
