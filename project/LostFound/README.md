@@ -68,9 +68,6 @@ lostfound/
 
 ```
 
-    
----
-
 ## 🗄 Database
 
 ### users
